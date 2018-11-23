@@ -102,7 +102,7 @@ app.get('/getFavorite', (req, res) => {
 });
 
 app.post('/getFavorite/Add', (req, res) => {
-    console.log('UserId - ', req.body.email);
+  console.log('UserId - ', req.body.email);
 
   const data = [
     {
@@ -141,6 +141,7 @@ app.post('/getFavorite/Delete', (req, res) => {
     });
 });
 
-app.listen(5000, () => {
-  console.log('Server listening on port 5000');
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
